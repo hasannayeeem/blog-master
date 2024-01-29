@@ -1,0 +1,285 @@
+.thread{
+
+    .add_thread {
+        padding: 20px !important;
+        border-radius: 8px;
+        background-color: #fff;
+        margin: 50px auto 50px;
+        box-shadow: 0px 11px 33px rgba(2, 119, 133, 0.1);
+   
+   
+        .input_field {
+            margin: 15px 0;
+          }
+    }
+      
+}
+.ant-btn-primary {
+    color: #fff;
+    background-color: #1677ff;
+    box-shadow: 0 2px 0 rgb(5 145 255 / 10%);
+  }
+  .ant-modal-body {
+    .single_thread_top{
+      display: flex;
+      align-items: center;
+
+      .single_thread_profile_img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        margin:0 15px 0 0;
+
+      }
+      .single_thread_username{
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    .form_create{
+      margin: 10px 0 20px;
+
+      .form_field{
+        padding: 10px 2px 20px;
+        border-radius: 5px;
+        width: 100%;
+       border: 0;
+       outline: none;
+       font-size: 18px;
+
+       :focus{
+        outline: none;
+        border:none;
+       }
+      }
+    }
+
+  }
+
+// .ant-modal .ant-modal-title{
+//     padding-bottom: 20px;
+//     border-bottom: 1px solid #ddd;
+//     font-size: 20px;
+//     color: #050505;
+//     text-align: center;
+//   }
+
+
+
+
+//single thread
+.single_thread {
+  margin: 0 auto 30px;
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 2px 5px 7px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+
+    .single_thread_top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .single_thread_top_left{
+        display: flex;
+        align-items: center;
+
+        .single_thread_profile_img{
+          width: 58px;
+          height: 56px;
+          border: 2px solid #F7F7F7;
+          border-radius: 13px;
+          filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.25));
+          object-fit: cover;
+          cursor: pointer;
+        }
+
+        .single_thread_user_info{
+            margin: 0 10px;
+            cursor: pointer;
+
+            .single_thread_username{
+              font-size: 16px;
+              font-weight: 600;
+              color: #101010;
+            }
+            .single_thread_user_title{
+              font-size: 12px;
+              font-weight: 400;
+              color: #767676;
+            }
+        }
+
+      }
+      .single_thread_top_right{
+        .single_thread_date{
+          font-weight: 400;
+          font-size: 13px;
+          color: #767676;
+        }
+      }
+  }
+  .single_thread_text_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    .single_thread_text{
+      font-size: 16px;
+    }
+  }
+
+  .single_thread_btm {
+    padding: 10px 0;
+    /* border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .single_thread_btm_left {
+      display: flex;
+
+
+      .love_btn {
+        border: none;
+        /* background-color: transparent; */
+        color: #67656B;
+        /* font-size: 14px; */
+        margin: 0 20px 0 0;
+      
+        background: #F2F2F2;
+        border-radius: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+
+        .love_icon-btn {
+          font-size: 20px;
+        }
+      }
+
+      .comment_btn {
+        border: none;
+        background-color: transparent;
+        color: #67656B;
+        font-size: 14px;
+        background: #F2F2F2;
+        box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        .icon-btn {
+          margin-right: 7px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .love-comment-content{
+    .love_count {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .love_icon_btn {
+        background-color: #dacfcf;
+          color: #fff;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 15px;
+        }
+      
+      p{
+        margin-bottom: 0;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+
+.love_icon {
+  font-size: 14px;
+}
+
+
+//edit thread
+
+.thread_modal{
+  .thread_modal_btn {
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+  }
+  .modal_open {
+    width: 170px;
+    padding: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    .modal_ul{
+      .modal_list{
+        transition: .3s ease all;
+        &:hover{
+          background-color: #EEEEEE;
+        }
+        .edit_btn {
+          font-size: 14px;
+          padding: 6px 8px;
+          border: none;
+          background-color: transparent;
+        }
+        .form_create {
+          margin: 20px 0;
+    
+          .input {
+            border: 0;
+            outline: none;
+    
+            &focus{
+              outline: none;
+              border: none;
+            }
+          }
+          .form_field {
+            padding: 10px 2px 20px;
+            border-radius: 5px;
+            width: 100%;
+          }
+        }
+      }
+      .modal_item{
+        border-top: 1px solid #d0d0d0;
+      }
+    }
+  }
+}
+.ant-modal .ant-modal-title{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+  color: #050505;
+  text-align: center;
+}

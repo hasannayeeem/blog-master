@@ -1,0 +1,27 @@
+.addButton {
+    z-index: 1;
+}
+.addButton::before {
+    content: 'Add Donor';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 0;
+    transition: all .3s;
+    opacity: 0;
+    font-weight: 500;
+    font-size: 0px;
+    padding: 10px;
+    border-radius: 999999px;
+    text-align: left;
+    padding-left: 25px;
+    color: white;
+    background: #027785;
+}
+.addButton:hover::before {
+    width: 200px;
+    opacity: 10;
+    font-size: 18px;
+}
