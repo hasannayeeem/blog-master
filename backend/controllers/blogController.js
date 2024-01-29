@@ -37,37 +37,15 @@ const createBlog = asyncHandler(async (req, res) => {
   const getBlogByUserEmail = asyncHandler(async (req, res) => {
     console.log('rrrrrrrrrrrrrrrrrrr');
     const email = req.query.email;
-    const myQuizzes = await Quiz.find({});
-    let perticipatedQuizzes = [];
+    const myBlogs = await Blog.find({});
 
-    const quizzes = myQuizzes.filter((quizzes => (quizzes.users.filter((user => (user.userEmail === email)))).length && quizzes))
-    // for(let i=0;i<myQuizzes.length;i++){
-    //   const quiz = myQuizzes[i];
-    //   console.log('EEEEEEEEEEEEE: '+quiz)
-    //   for(let j=0;j<quiz.users.length;j++){
-    //     const quser = quiz.users[j];
-    //     if(quser.userEmail===email){
-    //       console.log('matched:::::::    '+email);
-
-    //       perticipatedQuizzes.push(quiz);
-    //       console.log(perticipatedQuizzes);
-    //     }
-    //   }
-    // }
-    // console.log(perticipatedQuizzes);
-    // if (!perticipatedQuizzes) {
-    //   return
-    // } else {
-    //   return res.status(200).json({
-    //     perticipatedQuizzes,
-    //   });
-    // }
-
-    if (!quizzes) {
+    const blogs = myBlogs.filter((blogs => (blogs.users.filter((user => (user.userEmail === email)))).length && blogs))
+    
+    if (!blogs) {
       return
     } else {
       return res.status(200).json({
-        quizzes,
+        blogs,
       });
     }
   });
@@ -83,7 +61,7 @@ const createBlog = asyncHandler(async (req, res) => {
   });
 
   const deleteBlog = asyncHandler(async (req, res) => {
-    const deleteBlog = await Quiz.findByIdAndDelete(req.params.id);
+    const deleteBlog = await Blog.findByIdAndDelete(req.params.id);
     if (!deleteBlog) {
       res.status(400);
       throw new Error("Something Went Wrong!");

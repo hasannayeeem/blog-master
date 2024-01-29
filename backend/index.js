@@ -21,7 +21,7 @@ Connection(USERNAME, PASSWORD);
 
 app.use('/api/v1', router)
 app.get('/', (req, res) => {
-	res.send('Welcome to QuizzesMaker Serverzzz')
+	res.send('Welcome to BlogMaster Serverzzz')
 })
 
 app.listen(process.env.PORT || 5001, () => {
